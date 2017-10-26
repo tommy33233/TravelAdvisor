@@ -14,9 +14,9 @@ namespace BLL.Services
 {
     class UserService:IUserService
     {
-        private IUnitOfWork Database { get; set; }
+        private IAuthenticationUnitOfWork Database { get; set; }
 
-        public UserService(IUnitOfWork uow)
+        public UserService(IAuthenticationUnitOfWork uow)
         {
             Database = uow;
         }

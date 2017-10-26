@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace DAL.Repositories
 {
-    public class IdentityUnitOfWork:IUnitOfWork
+    public class IdentityUnitOfWork:IAuthenticationUnitOfWork
     {
         private ApplicationContext db;
         private ApplicationUserManager userManager;
