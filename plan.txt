@@ -1,0 +1,14 @@
+Create plan :think about first steps, first features,create database with first simple tables. 
+create n-tier solution to view this simple features. 
+Have plan for at least a day
+
+
+
+1) Country
+2) Cities
+3) attrarctions
+4) type of travel
+5) history of cities and countries
+6) hotels
+7) transport
+8) time to travel
