@@ -1,0 +1,2 @@
+onion with generic repo: https://social.technet.microsoft.com/wiki/contents/articles/36655.onion-architecture-in-asp-net-core-mvc.aspx#Repository_Layer2 
+generic repo & uow: https://www.codeproject.com/Articles/825646/Generic-Repository-and-UnitofWork-patterns-in-MVC
