@@ -5,11 +5,10 @@ namespace DAL.Interfaces
 {
     public interface IUnitOfWork:IDisposable
     {
-       // IRepository<T> t { get;  }
         IRepository<Country> Countries { get; }
         IRepository<City> Cities { get;  }
         IRepository<Region> Regions { get; }
-        //IRepository<RegionNominations> RegionNominations { get; set; }
+        IRepository<RegionNominations> RegionNominations { get;}
         void Save();
     }
 }

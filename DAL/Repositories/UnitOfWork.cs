@@ -8,10 +8,27 @@ namespace DAL.Repositories
     class UnitOfWork : IUnitOfWork
     {
         private ApplicationContext db;
-        private CountryRepository countryRepository;
-        private RegionRepository regionRepository;
-        private CityRepository cityRepository;
+        //private CountryRepository countryRepository;
+        //private RegionRepository regionRepository;
+        //private CityRepository cityRepository;
+        //private RegionNominations _regionNominationsRepository;
+        private IRepository<Country> countryRepository;
+        private IRepository<City> cityRepository;
+        private IRepository<Region> regionRepository;
+        private IRepository<RegionNominations> _regionNominationsRepository;
 
+
+        public IRepository<RegionNominations> RegionNominations
+        {
+            get
+            {
+                if (_regionNominationsRepository == null)
+                {
+                    _regionNominationsRepository = new Repository<RegionNominations>(db);
+                }
+                return _regionNominationsRepository;
+            }
+        }
 
         public IRepository<City> Cities
         {
@@ -37,14 +54,6 @@ namespace DAL.Repositories
             }
         }
 
-        public IRepository<RegionNominations> RegionNominations
-        {
-            get
-            {
-                return null;
-            }
-        }
-
         public IRepository<Region> Regions
         {
             get
@@ -56,6 +65,7 @@ namespace DAL.Repositories
                 return regionRepository;
             }
         }
+      
 
         public void Save()
         {
