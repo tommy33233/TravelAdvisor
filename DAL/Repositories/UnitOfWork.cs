@@ -5,7 +5,7 @@ using DAL.Interfaces;
 
 namespace DAL.Repositories
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private ApplicationContext db;
         //private CountryRepository countryRepository;
