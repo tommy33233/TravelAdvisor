@@ -3,7 +3,7 @@ using BLL.DTO;
 
 namespace BLL.Interfaces
 {
-    interface IService
+    public interface IService
     {
         CountryDTO GetCountryById(int? id);
         CityDTO GetCityById(int? id);
@@ -12,7 +12,8 @@ namespace BLL.Interfaces
         IEnumerable<CountryDTO> GetCountries();
         IEnumerable<CityDTO> GetCities();
         IEnumerable<RegionDTO> GetRegions();
-        IEnumerable<RegionNominationDTO> GetRegionNominations(); 
+        IEnumerable<RegionNominationDTO> GetRegionNominations();
+        void AddCity(CityDTO city);
         void Dispose();
     }
 }

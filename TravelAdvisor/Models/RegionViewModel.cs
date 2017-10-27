@@ -1,6 +1,6 @@
-﻿namespace BLL.DTO
+﻿namespace TravelAdvisor.Models
 {
-    public class RegionDTO
+    public class RegionViewModel
     {
         public int RegionId { get; set; }
         public int CountryId { get; set; }

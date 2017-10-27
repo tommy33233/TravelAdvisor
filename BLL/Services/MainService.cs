@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using AutoMapper;
 using BLL.DTO;
 using BLL.Interfaces;
@@ -8,7 +7,7 @@ using DAL.Interfaces;
 
 namespace BLL.Services
 {
-    internal class MainService : IService
+    public class MainService : IService
     {
         private IUnitOfWork Database { get; set; }
 
@@ -70,6 +69,12 @@ namespace BLL.Services
         {
             Mapper.Initialize(cfg => cfg.CreateMap<RegionNominations, RegionNominationDTO>());
             return Mapper.Map<RegionNominations, RegionNominationDTO>(Database.RegionNominations.Get(id.HasValue?(int)id:0));
+        }
+
+        public void AddCity(CityDTO city)
+        {
+            Mapper.Initialize(cfg => cfg.CreateMap<CityDTO, City>());
+           //var cityCore =  Mapper.Map<CityDTO, City>(Database.Cities.Create(city));
         }
     }
 }

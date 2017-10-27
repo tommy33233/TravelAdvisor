@@ -1,6 +1,6 @@
-﻿namespace BLL.DTO
+﻿namespace TravelAdvisor.Models
 {
-    public class RegionNominationDTO
+    public class RegionNominationViewModel
     {
         public int NominationId { get; set; }
         public string Name { get; set; }

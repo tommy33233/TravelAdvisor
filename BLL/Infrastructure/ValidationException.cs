@@ -2,7 +2,7 @@
 
 namespace BLL.Infrastructure
 {
-    class ValidationException:Exception
+    public class ValidationException:Exception
     {
         public string Property { get; protected set; }
 
