@@ -2,6 +2,10 @@ Create plan :think about first steps, first features,create database with first 
 create n-tier solution to view this simple features. 
 Have plan for at least a day
 
+creating web app path 
+from ui to code behind
+
+
 DB plan
  
 1) Country   // need update
