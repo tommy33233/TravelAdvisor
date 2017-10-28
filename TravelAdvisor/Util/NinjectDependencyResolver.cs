@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-
 using BLL.Interfaces;
 using BLL.Services;
 using Ninject;
@@ -20,12 +19,12 @@ namespace TravelAdvisor.Util
 
         public object GetService(Type serviceType)
         {
-            throw new NotImplementedException();
+            return kernel.TryGet(serviceType);
         }
 
         public object GetServices(Type serviceType)
         {
-            return kernel.TryGet(serviceType);
+            return kernel.GetAll(serviceType);
         }
 
         private void AddBindings()

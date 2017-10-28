@@ -17,6 +17,11 @@ namespace DAL.Repositories
         private IRepository<Region> regionRepository;
         private IRepository<RegionNominations> _regionNominationsRepository;
 
+        public UnitOfWork(string connectionString)
+        {
+            db = new ApplicationContext(connectionString);
+        }
+
 
         public IRepository<RegionNominations> RegionNominations
         {

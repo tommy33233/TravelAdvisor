@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DAL.Entities
 {
     public class RegionNominations
     {
-        public int NominationId { get; set; }
+        [Key]
+        public int RegionNominationId { get; set; }
         public string Name { get; set; }
 
         public ICollection<Region> Regions { get; set; }

@@ -4,7 +4,7 @@ using Ninject.Modules;
 
 namespace BLL.Infrastructure
 {
-    class ServiceModule:NinjectModule
+    public class ServiceModule:NinjectModule
     {
         private string connectionString;
 

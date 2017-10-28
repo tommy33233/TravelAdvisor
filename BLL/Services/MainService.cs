@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using BLL.DTO;
 using BLL.Interfaces;
@@ -35,8 +36,11 @@ namespace BLL.Services
 
         public IEnumerable<CountryDTO> GetCountries()
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<Country, CountryDTO>());
-            return Mapper.Map<IEnumerable<Country>, List<CountryDTO>>(Database.Countries.GetAll());
+            //Mapper.Initialize(cfg => cfg.CreateMap<Country, CountryDTO>());
+            //return Mapper.Map<IEnumerable<Country>, List<CountryDTO>>(Database.Countries.GetAll());
+            var countries = Database.Countries.GetAll();
+            return countries.Select(x => CountryDTO.CountryCoreToDTO(x));
+            return null;
         }
 
         public CountryDTO GetCountryById(int? id)
