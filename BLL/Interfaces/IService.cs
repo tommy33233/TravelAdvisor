@@ -13,6 +13,8 @@ namespace BLL.Interfaces
         IEnumerable<CityDTO> GetCities();
         IEnumerable<RegionDTO> GetRegions();
         IEnumerable<RegionNominationDTO> GetRegionNominations();
+        AttractionsDTO GetAttractionById(int id);
+        IEnumerable<AttractionsDTO> GetAttractions(); 
         void AddCity(CityDTO city);
         void Dispose();
     }

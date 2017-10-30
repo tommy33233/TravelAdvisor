@@ -62,6 +62,8 @@
     <Compile Include="EF\ApplicationContext.cs" />
     <Compile Include="Entities\ApplicationRole.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
+    <Compile Include="Entities\Attractions.cs" />
+    <Compile Include="Entities\AttractionType.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\ClientProfile.cs" />
     <Compile Include="Entities\Country.cs" />

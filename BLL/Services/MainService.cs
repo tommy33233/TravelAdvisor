@@ -39,8 +39,7 @@ namespace BLL.Services
             //Mapper.Initialize(cfg => cfg.CreateMap<Country, CountryDTO>());
             //return Mapper.Map<IEnumerable<Country>, List<CountryDTO>>(Database.Countries.GetAll());
             var countries = Database.Countries.GetAll();
-            return countries.Select(x => CountryDTO.CountryCoreToDTO(x));
-            return null;
+            return countries.Select(x => CountryDTO.CountryCoreToDTO(x));            
         }
 
         public CountryDTO GetCountryById(int? id)
@@ -79,6 +78,23 @@ namespace BLL.Services
         {
             Mapper.Initialize(cfg => cfg.CreateMap<CityDTO, City>());
            //var cityCore =  Mapper.Map<CityDTO, City>(Database.Cities.Create(city));
+            var cityCore = CityDTO.CityFromDtoToCore(city);
+            Database.Cities.Create(cityCore);
+        }
+
+        public IEnumerable<AttractionsDTO> GetAttractions()
+        {
+            //Mapper.Initialize(cfg => cfg.CreateMap<Attractions, AttractionsDTO>());
+            //return Mapper.Map<IEnumerable<Attractions>, List<AttractionsDTO>>(Database.Attractions.GetAll());
+            var attractions = Database.Attractions.GetAll();
+            return attractions.Select(x => AttractionsDTO.AttractionsFromCoreToDTO(x));
+        }
+
+        public AttractionsDTO GetAttractionById(int id)
+        {
+            Mapper.Initialize(cfg => cfg.CreateMap<Attractions, AttractionsDTO>());
+            return Mapper.Map<Attractions, AttractionsDTO>(Database.Attractions.Get(id));
+
         }
     }
 }

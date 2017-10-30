@@ -15,5 +15,6 @@ namespace DAL.EF
         public DbSet<City> Cities { get; set; }
         public DbSet<Region> Regions { get; set; }
         public DbSet<RegionNominations> RegionNominations { get; set; }
+        public DbSet<Attractions> Attractions { get; set; }
     }
 }

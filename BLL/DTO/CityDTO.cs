@@ -9,7 +9,7 @@ namespace BLL.DTO
         public int CountryId { get; set; }
         public int Population { get; set; }
 
-        public City CityFromDtoToCore(CityDTO cityDto)
+        public static City CityFromDtoToCore(CityDTO cityDto)
         {
             City city = new City();
             if (cityDto != null)
@@ -22,7 +22,7 @@ namespace BLL.DTO
             return city;
         }
 
-        public CityDTO CityfromCoreToDto(City city)
+        public static CityDTO CityfromCoreToDto(City city)
         {
             CityDTO cityDto = new CityDTO
             {

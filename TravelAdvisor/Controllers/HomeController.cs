@@ -45,6 +45,13 @@ namespace TravelAdvisor.Controllers
             return View(countries);
         }
 
+        public ActionResult Attractions()
+        {
+            var attractions = service.GetAttractions();
+            var att = attractions.Select(x => AttractionsViewModel.AttractionsFromDTOToViewModel(x));
+            return View(att);
+        }
+
         [HttpPost]
         public ActionResult AddCity(CityViewModel city)
         {

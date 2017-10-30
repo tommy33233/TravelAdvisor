@@ -16,10 +16,23 @@ namespace DAL.Repositories
         private IRepository<City> cityRepository;
         private IRepository<Region> regionRepository;
         private IRepository<RegionNominations> _regionNominationsRepository;
+        private IRepository<Attractions> attractionsRepository; 
 
         public UnitOfWork(string connectionString)
         {
             db = new ApplicationContext(connectionString);
+        }
+
+        public IRepository<Attractions> Attractions
+        {
+            get
+            {
+                if (attractionsRepository == null)
+                {
+                    attractionsRepository = new Repository<Attractions>(db);
+                }
+                return attractionsRepository;
+            }
         }
 
 

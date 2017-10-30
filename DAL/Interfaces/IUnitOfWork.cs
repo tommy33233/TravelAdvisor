@@ -9,6 +9,7 @@ namespace DAL.Interfaces
         IRepository<City> Cities { get;  }
         IRepository<Region> Regions { get; }
         IRepository<RegionNominations> RegionNominations { get;}
+        IRepository<Attractions> Attractions { get; }
         void Save();
     }
 }
