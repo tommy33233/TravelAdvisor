@@ -5,6 +5,8 @@ Have plan for at least a day
 creating web app path 
 from ui to code behind
 
+use template, crete master page and countries page, add attractions to db and page
+
 
 DB plan
  
