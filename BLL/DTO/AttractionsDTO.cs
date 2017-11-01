@@ -10,6 +10,7 @@ namespace BLL.DTO
         public int? CityId { get; set; }
         public int Type { get; set; }
         public string Description { get; set; }
+        public string ImageName { get; set; }
 
         public static AttractionsDTO AttractionsFromCoreToDTO(Attractions attraction)
         {
@@ -20,7 +21,8 @@ namespace BLL.DTO
                 CountryId = attraction.CountryId,
                 CityId = attraction.CityId,
                 Type = attraction.AttractionType,
-                Description = attraction.Description
+                Description = attraction.Description,
+                ImageName = attraction.ImageName
             };
         }
 
@@ -33,7 +35,8 @@ namespace BLL.DTO
                 CountryId = attraction.CountryId,
                 CityId = attraction.CityId,
                 AttractionType = attraction.Type,
-                Description = attraction.Description
+                Description = attraction.Description,
+                ImageName = attraction.ImageName
             };
         }
     }

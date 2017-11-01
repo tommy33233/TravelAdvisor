@@ -11,6 +11,7 @@ namespace DAL.Entities
        public int? CityId { get; set; }
        public int AttractionType { get; set; }
        public string Description { get; set; }
+       public string ImageName { get; set; }
 
        public virtual Country Country { get; set; }
        public virtual City City { get; set; }

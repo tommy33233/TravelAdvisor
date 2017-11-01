@@ -48,7 +48,7 @@ namespace TravelAdvisor.Controllers
         public ActionResult Attractions()
         {
             var attractions = service.GetAttractions();
-            var att = attractions.Select(x => AttractionsViewModel.AttractionsFromDTOToViewModel(x));
+            var att = attractions.Select(x => AttractionsViewModel.AttractionsFromDTOToViewModel(x)).ToList();
             return View(att);
         }
 

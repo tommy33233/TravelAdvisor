@@ -10,6 +10,7 @@ namespace TravelAdvisor.Models
         public int? CityId { get; set; }
         public int Type { get; set; }
         public string Description { get; set; }
+        public string ImageName { get; set; }
 
         public static AttractionsDTO AttractionsFromViewToDto(AttractionsViewModel attraction)
         {
@@ -20,7 +21,8 @@ namespace TravelAdvisor.Models
                 CountryId = attraction.CountryId,
                 CityId = attraction.CityId,
                 Type = attraction.Type,
-                Description = attraction.Description
+                Description = attraction.Description,
+                ImageName = attraction.ImageName
             };
         }
 
@@ -33,7 +35,8 @@ namespace TravelAdvisor.Models
                 CountryId = attraction.CountryId,
                 CityId = attraction.CityId,
                 Type = attraction.Type,
-                Description = attraction.Description
+                Description = attraction.Description,
+                ImageName = attraction.ImageName
             };
         }
     }
