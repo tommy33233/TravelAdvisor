@@ -195,9 +195,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\mirCastle.jpg" />
     <Content Include="images\overlay.png" />
     <Content Include="images\pic01.jpg" />
     <Content Include="images\pic02.jpg" />
+    <Content Include="images\stadiumDinamo.jpeg" />
+    <Content Include="images\Troitskoe_Predmeste.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
