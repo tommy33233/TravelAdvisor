@@ -24,14 +24,17 @@
         <th>
             @Html.DisplayNameFor(model => model.Phonecode)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Info)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CountryId)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.SortName)
         </td>
@@ -40,6 +43,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Phonecode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Info)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

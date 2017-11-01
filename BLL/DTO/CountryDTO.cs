@@ -8,6 +8,8 @@ namespace BLL.DTO
         public string SortName { get; set; }
         public string Name { get; set; }
         public int Phonecode { get; set; }
+        public string Info { get; set; }
+        public string ImageName { get; set; }
 
         public static CountryDTO CountryCoreToDTO(Country country)
         {
@@ -16,7 +18,9 @@ namespace BLL.DTO
                 CountryId = country.CountryId,
                 SortName = country.SortName,
                 Name = country.Name,
-                Phonecode = country.Phonecode
+                Phonecode = country.Phonecode,
+                Info = country.Info,
+                ImageName = country.ImageName
             };
             return countryDTO;
         }
@@ -28,7 +32,9 @@ namespace BLL.DTO
                 CountryId = countryDTO.CountryId,
                 SortName = countryDTO.SortName,
                 Name = countryDTO.Name,
-                Phonecode = countryDTO.Phonecode
+                Phonecode = countryDTO.Phonecode,
+                Info = countryDTO.Info,
+                ImageName = countryDTO.ImageName
             };
             return country;
         }

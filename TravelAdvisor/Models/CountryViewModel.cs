@@ -8,7 +8,8 @@ namespace TravelAdvisor.Models
         public string SortName { get; set; }
         public string Name { get; set; }
         public int Phonecode { get; set; }
-
+        public string ImageName { get; set; }
+        public string Info { get; set; }
 
         public static CountryDTO CountryViewToDTO(CountryViewModel countryView )
         {
@@ -17,7 +18,9 @@ namespace TravelAdvisor.Models
                 CountryId = countryView.CountryId,
                 Phonecode = countryView.Phonecode,
                 SortName = countryView.SortName,
-                Name = countryView.Name
+                Name = countryView.Name,
+                Info = countryView.Info,
+                ImageName = countryView.ImageName
             };
         }
 
@@ -28,7 +31,9 @@ namespace TravelAdvisor.Models
                 CountryId = countryDTO.CountryId,
                 Phonecode = countryDTO.Phonecode,
                 SortName = countryDTO.SortName,
-                Name = countryDTO.Name
+                Name = countryDTO.Name,
+                Info = countryDTO.Info,
+                ImageName = countryDTO.ImageName
             };
         }
     }
