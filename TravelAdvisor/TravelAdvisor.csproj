@@ -188,17 +188,24 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\CollageBY.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="images\architecture.jpg" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\culture.jpg" />
+    <Content Include="images\CollageUK.jpg" />
     <Content Include="images\mirCastle.jpg" />
+    <Content Include="images\nature.jpg" />
+    <Content Include="images\nightlife.jpg" />
     <Content Include="images\overlay.png" />
     <Content Include="images\pic01.jpg" />
     <Content Include="images\pic02.jpg" />
+    <Content Include="images\sea.jpg" />
     <Content Include="images\stadiumDinamo.jpeg" />
     <Content Include="images\Troitskoe_Predmeste.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -245,6 +252,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Attractions.cshtml" />
+    <Content Include="Views\Home\Countries.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

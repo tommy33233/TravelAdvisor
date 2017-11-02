@@ -1,0 +1,47 @@
+﻿@model List<TravelAdvisor.Models.CountryViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string aa = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Attractions</title>
+</head>
+<body>
+    <div id="page" class="container">
+
+        <div style="display: inline-block">
+
+            @for (var i = 0; i < Model.Count(); i++)
+            {
+                <div style="display: inline-block">
+                    <div class="column@i">
+                        <div class="title">
+                            <h2>@Model[i].Name</h2>
+                        </div>
+                        <br/>
+                        <a href='@Url.Action("Attractions", "Home",new { countryId = @Model[i].CountryId })'>
+                            <img src="~/images/@Model[i].ImageName" width="282" height="150" alt="" />
+                        </a>
+                        <p>@Model[i].Info</p>
+                    </div>
+                </div>
+
+                if (i % 3 == 2)
+                {
+                    <br />
+                }
+            }
+        </div>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    </div>
+</body>
+</html>

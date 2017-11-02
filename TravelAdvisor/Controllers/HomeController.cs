@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using AutoMapper;
@@ -45,11 +46,36 @@ namespace TravelAdvisor.Controllers
             return View(countries);
         }
 
-        public ActionResult Attractions()
+        public ActionResult Countries()
+        {
+            IEnumerable<CountryDTO> countryDtos = service.GetCountries();
+            var countries = countryDtos.Select(x => CountryViewModel.CountryDTOToView(x));
+            var countriesToView = countries.Where(x => x.Info!=null).ToList();
+            return View(countriesToView);
+        }
+
+        //public ActionResult Attractions()
+        //{
+        //    var attractions = service.GetAttractions();
+        //    var att = attractions.Select(x => AttractionsViewModel.AttractionsFromDTOToViewModel(x)).ToList();
+        //    Random rand = new Random();
+        //    return View(att.OrderBy(x => rand.Next()).Take(3).ToList());
+        //}
+
+        public ActionResult Attractions(int? countryId)
         {
             var attractions = service.GetAttractions();
-            var att = attractions.Select(x => AttractionsViewModel.AttractionsFromDTOToViewModel(x)).ToList();
-            return View(att);
+            var countryAttractions = attractions.Select(x => AttractionsViewModel.AttractionsFromDTOToViewModel(x)).ToList();
+            if (countryId.HasValue)
+            {
+                countryAttractions = countryAttractions.Where(x => x.CountryId == countryId).ToList();
+            }
+            else
+            {
+                Random rand = new Random();
+                countryAttractions = countryAttractions.OrderBy(x => rand.Next()).Take(3).ToList();
+            }
+            return View(countryAttractions);
         }
 
         [HttpPost]
@@ -70,7 +96,15 @@ namespace TravelAdvisor.Controllers
             return View(city);
         }
 
+        public ActionResult HowToGet()
+        {
+            return View();
+        }
 
+        public ActionResult Hotels()
+        {
+            return View();
+        }
 
     }
 }

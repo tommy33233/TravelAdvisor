@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using BLL.Helpers
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,7 +18,7 @@
         <div id="header-wrapper">
             <div id="header" class="container">
                 <div id="logo">
-                    <h1><a href="#">Travel advisor</a>
+                    <h1><a href="~/Home/Index">Travel advisor</a>
                     </h1>
                     <p>vacation helper</p>
                 </div>
@@ -33,9 +34,9 @@
             </div>
             <div id="menu" class="container">
                 <ul>
-                    <li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-                    <li><a href="#" accesskey="1" title="">Attractions</a></li>
-                    <li><a href="#" accesskey="2" title="">Our Clients</a></li>
+                    <li class="@Html.NavActive("Index", "Home")"><a href="~/Home/Index" accesskey="1" title="">Homepage</a></li>
+                    <li "@Html.NavActive("Countries", "Home")"><a href="/Home/Countries" accesskey="2" title="">Countries</a></li>
+                    <li class="@Html.NavActive("Attractions", "Home")"><a href="/Home/Attractions"  accesskey="1" title="">Attractions</a></li>
                     <li><a href="#" accesskey="3" title="">About Us</a></li>
                     <li><a href="#" accesskey="4" title="">Careers</a></li>
                     <li><a href="#" accesskey="5" title="">Contact Us</a></li>

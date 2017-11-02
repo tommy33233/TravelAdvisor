@@ -252,6 +252,7 @@ hr {
 	width: 582px;
 }
 
+
 #page .button
 {
 	margin-top: 1em;
@@ -490,7 +491,8 @@ ul.style3 .first {
 	.column1,
 	.column2,
 	.column3,
-	.column4
+	.column4,
+    .column5
 	{
 		width: 282px;
 	}
@@ -507,6 +509,10 @@ ul.style3 .first {
 	{
 		float: right;
 	}
+
+    .column5 {
+        margin-left: 24px
+    }
 
 /*********************************************************************************/
 /* Heading Titles                                                                */

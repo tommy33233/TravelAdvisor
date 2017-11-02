@@ -1,61 +1,81 @@
 ﻿@model IEnumerable<TravelAdvisor.Models.CountryViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "I bet you donэt even suspect how beautiful the world is!";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div id="page" class="container">
+    <div class="column1">
+        <div class="title">
+            <h2>Do you think it is important to travel?</h2>
+            <span class="byline">will it enhance your life?</span>
+        </div>
+        <p>
+            There is no other answer - YES! The things you see and experience on your travels will stay with you for life. Some memories are still so alive in your head that it feels like you are still there. You can get lots of new ideas for your art or other creative activities.
+            Being away from your usual surroundings will really stimulate your creativity and thinking. On this site you will find many beautiful and interesting places to visit, you can add your comments to places where you have already beed or even add some new attractions!
+        </p>
+    </div>
+    <div class="column3">
+        <div class="title">
+            <h2>Voyages</h2>
+        </div>
+        <img src="~/images/sea.jpg" width="282" height="150" alt="" />
+        <p>Find beautiful sea views, the best choice for beach lovers... </p>
+    </div>
+    <div class="column4">
+        <div class="title">
+            <h2>Architecture</h2>
+        </div>
+        <img src="~/images/architecture.jpg" width="282" height="150" alt="" />
+        <p>So many historical places with its magnificient spirit!</p>
+    </div>
+    <br />
+    <div class="column1">
+        <div class="title">
+            <h2>NightLife</h2>
+        </div>
+        <img src="~/images/nightlife.jpg" width="282" height="150" alt="" />
+        <p>
+            For those who are looking for night adventures...
+        </p>
+    </div>
 
-<h2>Index</h2>
+    <div class="column3">
+        <div class="title">
+            <h2>Nature</h2>
+        </div>
+        <img src="~/images/nature.jpg" width="282" height="150" alt="" />
+        <p>Amazing, calming and silencing nature!</p>
+        <a href="#" class="button">Etiam posuere</a>
+    </div>
+    <div class="column4">
+        <div class="title">
+            <h2>Culture</h2>
+        </div>
+        <img src="~/images/culture.jpg" width="282" height="150" alt="" />
+        <p>Dip into the world of unexplored cultures!</p>
+    </div>
+</div>
+    <div id="portfolio-wrapper">
+        <div id="portfolio" class="container">
+            <div class="title">
+                <h2>Start right now</h2>
+                <span class="byline">Meet wonderful people, see amazing views</span>
+            </div>
+            @*<div class="column1" align="center">
+                <div class="box">
+                    <span class="icon icon-cloud-download"></span>
+                    <h3>Vestibulum venenatis</h3>
+                    <p>Fermentum nibh augue praesent a lacus at urna congue rutrum.</p>
+                    <a href="#" class="button">Etiam posuere</a>
+                </div>
+            </div>*@
+        </div>
+  </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CountryId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SortName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Phonecode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Info)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SortName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phonecode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Info)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
 
-</table>
+
+
+
+
