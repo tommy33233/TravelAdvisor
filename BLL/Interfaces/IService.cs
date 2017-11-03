@@ -16,6 +16,7 @@ namespace BLL.Interfaces
         AttractionsDTO GetAttractionById(int id);
         IEnumerable<AttractionsDTO> GetAttractions(); 
         void AddCity(CityDTO city);
+        void AddAttraction(AttractionsDTO attraction);
         void Dispose();
     }
 }

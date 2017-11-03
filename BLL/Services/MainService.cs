@@ -96,5 +96,14 @@ namespace BLL.Services
             return Mapper.Map<Attractions, AttractionsDTO>(Database.Attractions.Get(id));
 
         }
+
+        public void AddAttraction(AttractionsDTO attraction)
+        {
+            //Mapper.Initialize(cfg => cfg.CreateMap<CityDTO, City>());
+            //var cityCore =  Mapper.Map<CityDTO, City>(Database.Cities.Create(city));
+            
+            var attractionCore = AttractionsDTO.AttractionsFromDTOToCore(attraction);
+            Database.Attractions.Create(attractionCore);
+        }
     }
 }

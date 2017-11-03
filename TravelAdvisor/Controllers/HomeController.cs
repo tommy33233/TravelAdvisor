@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using AutoMapper;
 using BLL.DTO;
 using BLL.Interfaces;
 using TravelAdvisor.Models;
@@ -93,7 +92,31 @@ namespace TravelAdvisor.Controllers
             {
                 ModelState.AddModelError(ex.Property, ex.Message);
             }
-            return View(city);
+            return RedirectToAction("Countries");
+        }
+
+        [HttpGet]
+        public ActionResult AddAttraction()
+        {
+            var model = new CountriesCitiesAttractionVeiwModel();
+            model.Countries = service.GetCountries().Select(x=>CountryViewModel.CountryDTOToView(x));
+            model.Cities = service.GetCities().Select(x => CityViewModel.CityFromDtoToView(x));
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult AddAttraction(AttractionsViewModel attraction)
+        {
+            try
+            {
+                service.AddAttraction(AttractionsViewModel.AttractionsFromViewToDto(attraction));
+            }
+            catch (ValidationException ex)
+            {
+                ModelState.AddModelError(ex.Property, ex.Message);
+            }
+
+            return RedirectToAction("Attractions");
         }
 
         public ActionResult HowToGet()

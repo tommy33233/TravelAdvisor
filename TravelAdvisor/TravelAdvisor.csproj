@@ -232,7 +232,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AttractionsViewModel.cs" />
+    <Compile Include="Models\AttractionTypeEnum.cs" />
     <Compile Include="Models\CityViewModel.cs" />
+    <Compile Include="Models\CountriesCitiesAttractionVeiwModel.cs" />
     <Compile Include="Models\CountryViewModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegionNominationViewModel.cs" />
@@ -253,6 +255,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Attractions.cshtml" />
     <Content Include="Views\Home\Countries.cshtml" />
+    <Content Include="Views\Home\AddAttraction.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

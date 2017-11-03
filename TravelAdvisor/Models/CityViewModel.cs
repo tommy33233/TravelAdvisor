@@ -20,5 +20,16 @@ namespace TravelAdvisor.Models
             };
             return cityDto;
         }
+        public static CityViewModel CityFromDtoToView(CityDTO cityDTO)
+        {
+            CityViewModel cityVM = new CityViewModel
+            {
+                CityId = cityDTO.CityId,
+                CityName = cityDTO.CityName,
+                CountryId = cityDTO.CountryId,
+                Population = cityDTO.Population
+            };
+            return cityVM;
+        }
     }
 }
